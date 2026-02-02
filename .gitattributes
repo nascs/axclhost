@@ -1,0 +1,2 @@
+*.rar filter=lfs diff=lfs merge=lfs -text
+src/lib/firmware/axcl/ax650_card.pac filter=lfs diff=lfs merge=lfs -text

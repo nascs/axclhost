@@ -1,0 +1,10 @@
+axclhost (3.6.5-1) noble; urgency=medium
+
+  [ dependabot[bot] ]
+  * chore(deps): bump actions/download-artifact from 4 to 5
+  * chore(deps): bump actions/checkout from 4 to 5
+
+  [ Jiali Chen ]
+  * fix: set CONFIG_USB_NO_TRANS_DMA_MAP=y when run on sun60iw2p1
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Wed, 28 Jan 2026 16:30:49 +0000

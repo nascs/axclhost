@@ -1,0 +1,39 @@
+Source: axclhost
+Section: kernel
+Priority: optional
+Maintainer: xiaoqiang <xiaoqiang@axera-tech.com>
+Standards-Version: 4.6.0
+Build-Depends: debhelper (>=12~),
+               devscripts,
+               dh-exec,
+               dh-sequence-dkms,
+               lintian,
+               crossbuild-essential-arm64 [!arm64],
+               libc6:arm64 [!arm64],
+
+Package: axclhost-dkms
+Architecture: all
+Depends: axclhost-firmware, task-axclhost, ${misc:Depends}, gcc (>= 9.4.0), make, patch, kmod
+Description: AXCL Host driver DKMS package
+ This package contains the DKMS source for the AXCL host driver.
+ It will automatically build and install the kernel modules for your
+ current kernel when the package is installed.
+ .
+ This package includes the following modules:
+  - ax_pcie_host_dev: Base PCIe device driver
+  - ax_pcie_msg: Message transport module
+  - ax_pcie_mmb: Memory management module
+  - axcl_host: Main host driver
+  - ax_pcie_p2p_rc: Point-to-point communication module
+
+Package: axclhost-firmware
+Architecture: all
+Depends: ${misc:Depends}
+Description: AXCL Host firmware and tools
+ This package contains firmware files and user-space tools for AXCL host.
+
+Package: task-axclhost
+Architecture: all
+Depends: ${misc:Depends}
+Description: AXCL Host configuration package
+ This package contains configuration files for AXCL host.

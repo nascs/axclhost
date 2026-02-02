@@ -1,0 +1,9 @@
+/.debhelper
+/debhelper-build-stamp
+/files
+/axclhost-dkms/
+/axclhost-firmware/
+/task-axclhost/
+/*.debhelper.log
+/*.debhelper
+/*.substvars
